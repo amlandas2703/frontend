@@ -6,5 +6,5 @@ RUN  dnf module disable nginx -y && \
      rm -rf /usr/share/nginx/html/*
 ADD ./ /usr/share/nginx/html/
 COPY ./nginx.conf /etc/nginx/nginx.conf
-USER nginx
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
+EXPOSE 80
